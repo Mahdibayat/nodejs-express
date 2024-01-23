@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: unset;
+}
+
+.min-height-page {
+  min-height: 80.4vh;
+  padding-top: 50px;
+}

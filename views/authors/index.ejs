@@ -1,0 +1,18 @@
+<div class="min-height-page">
+  <h1>authors</h1>
+
+  <form action="/authors" method="GET">
+    <h2>Search Authors</h2>
+    <label>
+      name
+      <input class="form-control" type="text" name="name" value="<%= searchOptions.name %>" />
+    </label>
+    <button class="btn btn-success">Search</button>
+  </form>
+
+  <div>
+    <% authors.forEach(author => { %>
+     <h3><%= author.name %></h3>
+    <% }) %>
+  </div>
+</div>
