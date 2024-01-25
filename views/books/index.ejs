@@ -1,0 +1,25 @@
+  <h1>Books</h1>
+
+  <form action="/books" method="GET" class="bg-secondary text-white p-3 rounded">
+    <h2>Search books</h2>
+
+    <div class="d-flex align-items-end gap-2 flex-wrap">
+      <label>
+        title
+        <input class="form-control" type="text" name="title" value="<%= searchOptions?.title %>" />
+      </label>
+      <label>
+        publish before
+        <input class="form-control" type="date" name="publish-before" value="<%= searchOptions?.['publish-before'] %>" />
+      </label>
+      <label>
+        publish after
+        <input class="form-control" type="date" name="publish-after" value="<%= searchOptions?.['publish-after'] %>" />
+      </label>
+      <button class="btn btn-info">Search</button>
+    </div>
+  </form>
+
+  <%- include('../partials/book.ejs', {books}) %>
+
+</div>

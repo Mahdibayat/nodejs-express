@@ -1,0 +1,42 @@
+<div
+  class="d-flex gap-2 align-items-center flex-wrap"
+>
+  <label class="form-label">
+    Title: 
+    <input class="form-control" type="text" name="title" />
+  </label>
+  
+  <label class="form-label">
+    Author: 
+    <select class="form-select" name="author">
+      <option selected disabled>Open this select menu</option>
+      <% authors.forEach(author => { %>
+        <% if (author.id === book.author) { %>
+          <option selected label="<%= author.name %>" value="<%= author.id %>">
+        <% } else { %>
+          <option label="<%= author.name %>" value="<%= author.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </label>
+  
+  <label class="form-label">
+    Publish Date:
+    <input type="date" name="publishDate" class="form-control" />
+  </label>
+  
+  <label class="form-label">
+    page count:
+    <input type="number" name="pageCount" class="form-control" />
+  </label>
+  
+  <label>
+    Cover Image:
+    <input type="file" name="cover" />
+  </label>
+
+  <label class="d-flex flex-column">
+    description:
+    <textarea name="description" ><%= book.description %></textarea>
+  </label>
+</div>

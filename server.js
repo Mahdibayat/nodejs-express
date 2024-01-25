@@ -27,5 +27,8 @@ const authorsRoutes = require('./routes/authors')
 app.use('/', indexRoutes);
 app.use('/authors', authorsRoutes);
 
+const booksRoutes = require('./routes/books')
+app.use('/books', booksRoutes);
+
 // LISTENER ==========
 app.listen(process.env.PORT || 3000);
